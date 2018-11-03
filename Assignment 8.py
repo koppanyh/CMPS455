@@ -43,15 +43,12 @@ def matches(string):
 
 	while True:
 		curIndex = stack.pop()
-		
 		if(canRead):
 			curTerm = string[0]
 			string = string[1:]
 			curNonTerm = curTerm
 			print("Read:", curTerm, " - ", "Stack:", stack)
-		
 		item = parseTable[curIndex][curNonTerm]
-
 		if item == None: return False
 		elif item == True: return True
 		elif item[0] == 's':
